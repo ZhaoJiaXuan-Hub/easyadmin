@@ -66,16 +66,17 @@ php bin/hyperf.php start
 
 使用程序定义的注解映射类实现，具体用法如下:
 ```
-//只验证登录状态 Auth
 use App\Annotation\Auth;
 use App\Annotation\Permission;
 class system
 {
+    //只验证登录状态 Auth
     #[Auth]
     public function new(): bool
     {
        return true;
     }
+    
     //验证登陆状态和权限 Permission('权限标识')
     //随后我们需要在后台添加此标识的权限到数据库中再分配给指定的角色即可
     #[Permission('system:new2')]
