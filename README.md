@@ -65,7 +65,7 @@ php bin/hyperf.php start
 1. 如何定义一个权限?
 
 使用程序定义的注解映射类实现，具体用法如下:
-```
+```php
 use App\Annotation\Auth;
 use App\Annotation\Permission;
 class system
