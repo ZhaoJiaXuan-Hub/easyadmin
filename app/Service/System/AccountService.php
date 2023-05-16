@@ -135,6 +135,6 @@ class AccountService extends AbstractService
         $salting = StringUtil::generateRandStr();
         $data['password'] = StringUtil::generatePassword($data['password'], $salting);
         $data['salting'] = $salting;
-        return $this->update($data['id'],$data);
+        return $this->mapper->update($data['id'],$data);;
     }
 }
